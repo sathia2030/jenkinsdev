@@ -29,8 +29,8 @@ public class HelloControllerPostTest {
 
 		String json = "{\"name\":\"Aravind\", \"age\":10}";
 
-		this.mockMvc.perform(post("/hello").contentType(MediaType.APPLICATION_JSON).content(json)).andDo(print())
-				.andExpect(status().isOk()).andExpect(jsonPath("$.name", Matchers.is("aravinda")))
+		this.mockMvc.perform(post("/post").contentType(MediaType.APPLICATION_JSON).content(json)).andDo(print())
+				.andExpect(status().isOk()).andExpect(jsonPath("$.name", Matchers.is("Aravind")))
 				.andExpect(jsonPath("$.age", Matchers.is(10))).andExpect(jsonPath("$.*", Matchers.hasSize(2)));
 	}
 
