@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building Started'
                 withMaven(maven: 'Maven3.6.3'){
-                	sh 'mvn clean package'
+                	bat 'mvn clean package'
                 }
                  echo 'Building Completed'
             }
@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing Started'
-                sh 'mvn test'
+                bat 'mvn test'
                 echo 'Testing Completed'
             }
         }
