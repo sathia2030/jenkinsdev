@@ -22,7 +22,7 @@ import com.demo.beanstalk.Services.HelloService;
 
 public class HelloControllerGetTest {
 	
-	
+
 	MockMvc mockMvc;
 	
 
