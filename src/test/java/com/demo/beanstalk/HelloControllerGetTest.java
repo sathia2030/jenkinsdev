@@ -19,17 +19,16 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.demo.beanstalk.Resource.HelloController;
 import com.demo.beanstalk.Services.HelloService;
 
-@TestExecutionListeners( { DependencyInjectionTestExecutionListener.class })
-@WebMvcTest(HelloController.class)
+
 public class HelloControllerGetTest {
 	
-	@Autowired
+	
 	MockMvc mockMvc;
 	
-	@MockBean
+
 	HelloService helloService;
 	
-	@Test
+	
 	public void firstGreet() throws Exception {
 		when(helloService.firstGreet()).thenReturn("Hello Aravind");
 		
